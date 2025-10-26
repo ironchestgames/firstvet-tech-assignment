@@ -6,6 +6,7 @@ This is Fredrik Järnbröst's submission to FirstVet for the technical assignmen
 
 - a _very_ bare bones node server that just serves a static json of one survey
 - a React Native app as the front-end of the survey
+- a nano suite of automated tests
 
 ### Overview of features
 
@@ -20,7 +21,7 @@ The checkbox, radio button, and text input are all pretty standard (except the p
 ## Prerequisites
 
 - Everything needed to run an expo app in iOS Simulator
-  - xcode (CLT, Simulators, etc.)
+  - xcode (Command-line tools, Simulators, etc.)
   - npm
 
 ## How to run
@@ -45,7 +46,7 @@ There are two test suites.
 
 1. The survey slice. This is a more traditional unit test as it tests the reducer function per se.
 
-2. The Step component. This is a small UI test to see that next buttons show up. There is logic to hide it when navigating to a step from the review, so we just want to make sure it's always visible by default.
+2. The Step component. This is a small UI test to see that next button show up. There is logic to hide it when navigating to a step from the review, so we just want to make sure it's always visible by default.
 
 ## TODO
 
@@ -70,6 +71,7 @@ Here I've listed things I thought would be good next steps to continue with this
 - bug: navigating to a step from step review should populate the step with the reply
 - bug: paw renders at 0,0 when pressing the actual checkbox/radio button
 - fix text input flickering
+- try Detox for ui testing instead of TL
 - maybe do something more conventional with the theme tokens (both spacing and colors have slightly wonky concepts)
 - might need scrollview for all steps for real content / smaller devices
 - fix type naming: Step (type) vs Step (component)
