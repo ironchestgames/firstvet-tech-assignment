@@ -1,0 +1,176 @@
+{
+  "id": "GUID-1",
+  "surveySchemaVersion": "1.0.0",
+  "title": "Customer Satisfaction Survey",
+  "steps": [
+    {
+      "id": "GUID-2",
+      "elements": [
+        {
+          "id": "GUID-3",
+          "type": "image",
+          "data": {
+            "src": "https://placecats.com/1000/1000",
+            "accessibilityLabel": "Welcome Image"
+          }
+        },
+        {
+          "id": "GUID-4",
+          "type": "title",
+          "data": {
+            "content": "Welcome to the survey!"
+          }
+        },
+        {
+          "id": "GUID-5",
+          "type": "paragraph",
+          "data": {
+            "content": "Welcome to our Customer Satisfaction Survey! We value your feedback and would love to hear about your experience with our services.\n\nThis survey will take approximately 5 minutes to complete."
+          }
+        },
+        {
+          "id": "GUID-100",
+          "type": "button",
+          "data": {
+            "action": "next",
+            "label": "Start Survey"
+          }
+        }
+      ]
+    },
+    {
+      "id": "GUID-7",
+      "elements": [
+        {
+          "id": "GUID-8",
+          "type": "paragraph",
+          "data": {
+            "content": "Which features do you use the most?"
+          }
+        },
+        {
+          "id": "GUID-9",
+          "type": "multiple_choice",
+          "data": {
+            "options": [
+              {
+                "id": "GUID-10",
+                "label": "Feature A"
+              },
+              {
+                "id": "GUID-11",
+                "label": "Feature B"
+              },
+              {
+                "id": "GUID-12",
+                "label": "Feature C"
+              }
+            ]
+          }
+        },
+        {
+          "id": "GUID-13",
+          "type": "button",
+          "data": {
+            "action": "next",
+            "label": "Next"
+          }
+        }
+      ]
+    },
+    {
+      "id": "GUID-14",
+      "elements": [
+        {
+          "id": "GUID-15",
+          "type": "paragraph",
+          "data": {
+            "content": "What improvement would you most like to see?"
+          }
+        },
+        {
+          "id": "GUID-16",
+          "type": "single_choice",
+          "data": {
+            "options": [
+              {
+                "label": "Improvement A",
+                "id": "GUID-17"
+              },
+              {
+                "label": "Improvement B",
+                "id": "GUID-18"
+              },
+              {
+                "label": "Improvement C",
+                "id": "GUID-19"
+              }
+            ]
+          }
+        },
+        {
+          "id": "GUID-20",
+          "type": "button",
+          "data": {
+            "action": "next",
+            "label": "Next"
+          }
+        }
+      ]
+    },
+    {
+      "id": "GUID-21",
+      "elements": [
+        {
+          "id": "GUID-22",
+          "type": "paragraph",
+          "data": {
+            "content": "Please rate your overall satisfaction with our service."
+          }
+        },
+        {
+          "id": "GUID-23",
+          "type": "rating",
+          "data": {
+            "max": 5
+          }
+        },
+        {
+          "id": "GUID-24",
+          "type": "button",
+          "data": {
+            "action": "next",
+            "label": "Next"
+          }
+        }
+      ]
+    },
+    {
+      "id": "GUID-25",
+      "elements": [
+        {
+          "id": "GUID-26",
+          "type": "paragraph",
+          "data": {
+            "content": "Anything else you'd like to share?"
+          }
+        },
+        {
+          "id": "GUID-27",
+          "type": "text_input",
+          "data": {
+            "placeholder": "Your comments here..."
+          }
+        },
+        {
+          "id": "GUID-24",
+          "type": "button",
+          "data": {
+            "action": "next",
+            "label": "Review"
+          }
+        }
+      ]
+    }
+  ]
+}
