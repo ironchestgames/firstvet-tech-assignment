@@ -81,5 +81,6 @@ Here I've listed things I thought would be good next steps to continue with this
 - add lint rule against importing from `/internals/`
 - fix inline styling in some places that have it
 - clean up the assets folder from expo defaults
+- clean up unused deps in the package.json
 
 _Note: I got carried away and apologize if the size of this repo is on the larger size._
