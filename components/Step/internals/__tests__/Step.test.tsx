@@ -1,7 +1,8 @@
 import { ThemeProvider } from "@/components/Theme";
 import { surveySlice } from "@/store/surveySlice";
 import { configureStore } from "@reduxjs/toolkit";
-import { render } from "@testing-library/react-native";
+import { fireEvent, render } from "@testing-library/react-native";
+import { useRouter } from "expo-router";
 import React from "react";
 import { Provider } from "react-redux";
 import Step from "../Step";
@@ -20,15 +21,23 @@ describe("Step component", () => {
     elements: [{ type: "button", data: { label: "Next", action: "next" } }],
   } as StepType;
 
-  it("renders the Next button", () => {
-    const { getByText } = render(
-      <Provider store={store}>
-        <ThemeProvider>
-          <Step step={stepMock} stepIndex={0} maxStepIndex={1} />
-        </ThemeProvider>
-      </Provider>
-    );
+  describe("when next button is pressed", () => {
+    it("navigates to next step", () => {
+      const push = jest.fn();
+      (useRouter as jest.Mock).mockReturnValue({ push });
 
-    expect(getByText("Next")).toBeTruthy();
+      const { getByText } = render(
+        <Provider store={store}>
+          <ThemeProvider>
+            <Step step={stepMock} stepIndex={0} maxStepIndex={1} />
+          </ThemeProvider>
+        </Provider>
+      );
+
+      fireEvent.press(getByText("Next"));
+
+      expect(push).toHaveBeenCalledTimes(1);
+      expect(push).toHaveBeenCalledWith("/step/1");
+    });
   });
 });
