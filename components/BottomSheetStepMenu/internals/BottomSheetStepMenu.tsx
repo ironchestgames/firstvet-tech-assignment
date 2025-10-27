@@ -1,10 +1,11 @@
 import Container from "@/components/Container";
 import Paragraph from "@/components/Paragraph";
-import { useTheme } from "@/components/Theme";
+import useViewStyles from "@/hooks/useViewStyles";
 import { reset } from "@/store/surveySlice";
 import { useRouter } from "expo-router";
 import { Modal, Pressable, View } from "react-native";
 import { useDispatch } from "react-redux";
+import bottomSheetStepMenuStyles from "./BottomSheetStepMenu.styles";
 
 type BottomSheetStepMenuProps = {
   visible: boolean;
@@ -15,24 +16,14 @@ const BottomSheetStepMenu = ({
   visible,
   onRequestClose,
 }: BottomSheetStepMenuProps) => {
-  const { theme } = useTheme();
   const router = useRouter();
   const dispatch = useDispatch();
+  const styles = useViewStyles(bottomSheetStepMenuStyles);
 
   return (
     <Modal transparent visible={visible} onRequestClose={onRequestClose}>
-      <Pressable
-        style={{
-          flex: 1,
-          backgroundColor: theme.colors.element.bottomSheetOverlay,
-        }}
-        onPress={onRequestClose}
-      />
-      <View
-        style={{
-          backgroundColor: theme.colors.background.base,
-        }}
-      >
+      <Pressable style={styles.overlay} onPress={onRequestClose} />
+      <View style={styles.sheetContainer}>
         <Container.Spacer />
         <Pressable
           onPress={() => {
