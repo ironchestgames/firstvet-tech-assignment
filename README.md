@@ -64,6 +64,7 @@ Here I've listed things I thought would be good next steps to continue with this
 - add notifications for when new surveys are available
 - add dark theme (there's some half-baked code in `components/Theme/internals/ThemeProvider.tsx`)
 - add some nice custom app icon and splash screen
+- add animations and gestures to the bottom sheet
 
 ### Technical improvements
 
@@ -84,5 +85,6 @@ Here I've listed things I thought would be good next steps to continue with this
 - fix inline styling in some places that have it
 - clean up the assets folder from expo defaults
 - clean up unused deps in the package.json
+- generalize the bottom sheet component
 
 _Note: I got carried away and apologize if the size of this repo is on the larger size._
